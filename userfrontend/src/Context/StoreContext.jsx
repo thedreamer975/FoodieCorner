@@ -7,7 +7,7 @@ const StoreContextProvider = (props) => {
     const [Cartitem, setcartitem] = useState({});
     const [food_list, setFoodList] = useState([]);
     const [token, setToken] = useState("");
-    const url = 'http://localhost:4000';
+    const url = 'https://foodiecorner-backend.onrender.com';
 
     // Fetch food list from API
     const fetchFoodList = async () => {
