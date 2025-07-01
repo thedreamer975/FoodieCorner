@@ -1,0 +1,65 @@
+.food-item{
+    width:100%;
+    margin: auto;
+    border-radius: 15px;
+    box-shadow: 0 0 10px #00000015;
+    transition: 0.3s;
+    animation: fadein 1s;
+}
+
+.food-item-img{
+    width: 100%;
+    border-radius: 15px 15px 0 0 ;
+}
+.food-item-info {
+    padding: 20px;
+}
+
+.food-price-ratings{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+.item-price{
+    font-size: 2.2rem;
+    font-weight: 500;
+    margin-top: 10px;
+}
+.item-desc{
+    color: #000000;
+    font-size: 1.2rem;
+}
+.food-price-ratings img{
+    width: 70px;
+}
+.item-name{
+    font-family: "Poppins", sans-serif;;
+    font-size: 2.4rem;
+    font-weight: 500;
+}
+.food-item-img-container {
+    position: relative;
+}
+.food-item-img-container .add{
+    position: absolute;
+    width: 35px;
+    bottom: 15px;
+    right: 15px;
+    border-radius: 50%;
+}
+.food-item-counter {
+    position: absolute;
+    bottom: 15px;
+    right: 15px;
+    background-color: white;
+    border-radius: 50px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding: 6px;
+}
+.food-item-counter img{
+    width: 35px;
+}

@@ -1,0 +1,45 @@
+:root {
+  --background-color: #fff;
+  --font-color: #222;
+  --theme-color: #350f5e;
+}
+
+/* Dark mode: override only what you want to change */
+[data-theme="dark"] {
+  --background-color: #181824;
+  --font-color: #fff; /* pure white for maximum contrast */
+  --theme-color: #350f5e;
+}
+
+/* Base background and font color for body only */
+body {
+  background: var(--background-color);
+  color: var(--font-color);
+  transition: background 0.3s, color 0.3s;
+}
+
+/* Only override text color for all elements in dark mode */
+[data-theme="dark"] h1,
+[data-theme="dark"] h2,
+[data-theme="dark"] h3,
+[data-theme="dark"] h4,
+[data-theme="dark"] h5,
+[data-theme="dark"] h6,
+[data-theme="dark"] p,
+[data-theme="dark"] span,
+[data-theme="dark"] a,
+[data-theme="dark"] li,
+[data-theme="dark"] label,
+[data-theme="dark"] input,
+[data-theme="dark"] button,
+[data-theme="dark"] th,
+[data-theme="dark"] td {
+  color: #fff !important;
+}
+
+/* For placeholder text in dark mode */
+[data-theme="dark"] input::placeholder,
+[data-theme="dark"] textarea::placeholder {
+  color: #eee;
+  opacity: 0.8;
+}

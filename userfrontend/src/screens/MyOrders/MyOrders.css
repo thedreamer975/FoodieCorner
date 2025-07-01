@@ -1,0 +1,72 @@
+.my-orders {
+    margin: 50px 0;
+    padding: 0 20px; /* Added padding for better spacing on smaller screens */
+}
+
+.my-orders .container {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    margin-top: 30px;
+}
+
+.my-orders-order {
+    display: grid;
+    grid-template-columns: 1fr 2fr 1fr 1fr 1fr; /* Adjusted for better responsiveness */
+    align-items: center;
+    gap: 20px; /* Reduced gap for a more compact look */
+    font-size: 1.4rem;
+    padding: 15px 20px; /* Increased padding for better touch targets */
+    color: #454545;
+    border: 1px solid var(--theme-color);
+    border-radius: 8px; /* Added border-radius for a softer look */
+    transition: box-shadow 0.3s ease; /* Added transition for hover effect */
+}
+
+.my-orders-order:hover {
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Added hover effect */
+}
+
+.my-orders-order img {
+    width: 50px; /* Set a fixed width for the image */
+    height: auto; /* Maintain aspect ratio */
+}
+
+.my-orders-order span {
+    color: var(--theme-color);
+}
+
+.my-orders-order p b {
+    font-weight: 500;
+    color: #454545;
+}
+
+.my-orders-order button {
+    border: none;
+    padding: 10px 15px; /* Adjusted padding for better button size */
+    border-radius: 4px;
+    background-color: #ffe1e1;
+    cursor: pointer;
+    color: #454545;
+    transition: background-color 0.3s ease; /* Added transition for hover effect */
+}
+
+.my-orders-order button:hover {
+    background-color: #ffcccc; /* Slightly darker on hover */
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+    .my-orders-order {
+        grid-template-columns: 1fr; /* Stack items on smaller screens */
+        text-align: center; /* Center text for better readability */
+    }
+
+    .my-orders-order img {
+        margin: 0 auto; /* Center the image */
+    }
+
+    .my-orders-order button {
+        width: 100%; /* Make button full width */
+    }
+}

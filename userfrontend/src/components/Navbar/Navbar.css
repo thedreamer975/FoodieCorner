@@ -1,0 +1,238 @@
+:root {
+  --theme-color: #350f5e;
+}
+
+/* Main Navbar */
+.navbar {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  padding: 0 1vw;
+  min-height: 70px;
+}
+
+/* Logo */
+.logo {
+  width: 300px;
+  height: 130px;
+  max-width: 60vw;
+  transition: width 0.2s, height 0.2s;
+}
+
+.logo-box {
+  background: #fff;
+  padding: 12px 20px;
+  border-radius: 16px;
+  display: inline-block;
+  /* Ensures the box doesn't overflow on small screens */
+  max-width: 90vw;
+}
+
+/* Nav Menu */
+.nav-menu, .navbar-menu {
+  display: flex;
+  list-style: none;
+  gap: 30px;
+  color: #495e49;
+  font-size: 1.8rem;
+  align-items: center;
+  padding: 0;
+  margin: 0;
+}
+
+.navbar li {
+  cursor: pointer;
+}
+
+.navbar .active {
+  border-bottom: 2px solid #49557e;
+}
+
+/* Right Section */
+.Navbar-right, .navbar-right {
+  display: flex;
+  align-items: center;
+  gap: 40px;
+}
+
+.Navbar-basket-icon {
+  position: relative;
+}
+.Navbar-basket-icon .dot {
+  position: absolute;
+  min-width: 10px;
+  min-height: 10px;
+  background-color: var(--theme-color);
+  border-radius: 50px;
+  top: -9px;
+  right: -9px;
+}
+
+/* Button */
+.navbar button {
+  background-color: transparent;
+  font-size: 1.6rem;
+  border: 1px solid var(--theme-color);
+  border-radius: 50px;
+  padding: 10px 20px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+.navbar button:hover {
+  background-color: #f2f4ff;
+}
+
+/* Profile Dropdown (minimal, blends in) */
+.navbar-profile {
+  position: relative;
+  cursor: pointer;
+}
+.navbar-profile img {
+  width: 36px;
+  border-radius: 50%;
+}
+.nav-profile-dropdown {
+  display: none;
+  position: absolute;
+  top: 46px;
+  right: 0;
+  background: #fff;
+  box-shadow: 0 2px 12px rgba(0,0,0,0.11);
+  border-radius: 10px;
+  min-width: 150px;
+  padding: 8px 0;
+  z-index: 100;
+}
+.navbar-profile:hover .nav-profile-dropdown {
+  display: block;
+}
+.nav-profile-dropdown a,
+.nav-profile-dropdown li {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 7px 18px;
+  color: #222;
+  font-size: 1rem;
+  cursor: pointer;
+  text-decoration: none;
+  transition: background 0.15s;
+}
+.nav-profile-dropdown a:hover,
+.nav-profile-dropdown li:hover {
+  background: #f2f4ff;
+}
+.nav-profile-dropdown hr {
+  border: none;
+  border-top: 1px solid #e0e0e0;
+  margin: 6px 0;
+}
+
+/* Responsive Styles */
+@media (max-width: 1050px) {
+  .logo {
+    width: 160px;
+    height: 60px;
+  }
+  .logo-box {
+    padding: 8px 14px;
+    border-radius: 12px;
+    max-width: 70vw;
+  }
+  .nav-menu, .navbar-menu {
+    gap: 20px;
+    font-size: 1.7rem;
+  }
+  .Navbar-right, .navbar-right {
+    gap: 30px;
+  }
+  .Navbar-basket-icon img {
+    width: 22px;
+  }
+  .navbar button {
+    padding: 8px 16px;
+  }
+}
+
+@media (max-width: 900px) {
+  .logo {
+    width: 120px;
+    height: 44px;
+  }
+  .logo-box {
+    padding: 6px 10px;
+    border-radius: 10px;
+    max-width: 60vw;
+  }
+  .nav-menu, .navbar-menu {
+    gap: 15px;
+    font-size: 1.5rem;
+  }
+  .Navbar-right, .navbar-right {
+    gap: 20px;
+  }
+  .Navbar-basket-icon img {
+    width: 20px;
+  }
+  .navbar button {
+    padding: 7px 12px;
+  }
+}
+
+/* DO NOT set .logo size in 700px or below! 
+   This keeps the 120x44px logo size from 900px and below */
+@media (max-width: 700px) {
+  .nav-menu, .navbar-menu {
+    display: none;
+  }
+  /* .logo { ... } <-- REMOVE or DO NOT include this rule! */
+  .logo-box {
+    padding: 2vw 3vw;
+    border-radius: 8px;
+    max-width: 80vw;
+  }
+  .Navbar-right, .navbar-right {
+    gap: 10px;
+  }
+}
+
+@media (max-width: 400px) {
+  .navbar {
+    padding: 0 4px;
+    min-height: 40px;
+  }
+  /* .logo { ... } <-- REMOVE or DO NOT include this rule! */
+  .logo-box {
+    padding: 1vw 2vw;
+    border-radius: 5px;
+    max-width: 90vw;
+  }
+  .Navbar-right, .navbar-right {
+    gap: 5px;
+  }
+  .Navbar-basket-icon img {
+    width: 12px;
+  }
+  .navbar-profile img {
+    width: 18px;
+  }
+  .navbar button {
+    padding: 4px 7px;
+    font-size: 0.8rem;
+  }
+}
+
+@media (max-width: 240px) {
+  .navbar {
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 2px 2px;
+    min-height: 24px;
+  }
+  /* .logo { ... } <-- REMOVE or DO NOT include this rule! */
+  .logo-box {
+    padding: 0.5vw 1vw;
+    border-radius: 3px;
+    max-width: 95vw;
+  }
+}
